@@ -1,0 +1,167 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.kerwinzhou.minilinkedin.MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/my_padding">
+        <!-- @ 是 资源的意思 @ means resource
+        tools : text 用于预览里面来看效果实际运行没有 Android: text 跑起来就看得到
+        tools are used for checking the preview-->
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/user_name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_toLeftOf="@+id/user_picture"
+                android:gravity="center_vertical">
+                <!-- 垂直居中对齐-->
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="23sp"
+                    android:text="Tom"
+                    android:layout_marginLeft="@dimen/spacing_small"/>
+
+                <!--  sp 根据系统设置自动调节大小contentDescription给视觉障碍的人看的-->
+                <ImageButton
+                    android:id="@+id/addNameEmailbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_mode_edit_black_18dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/user_name_layout"
+                android:layout_toLeftOf="@+id/user_picture"
+                android:textSize="23sp"
+                android:layout_marginLeft="8dp"
+                android:text="Email Address"/>
+            <!-- wrap——content表明 由内容决定-->
+            <ImageView
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:id="@+id/user_picture"
+                android:layout_alignParentRight="true"
+                android:src ="@drawable/kerwin"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/user_education"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/EDU"
+                android:textAllCaps="true"
+                android:textSize="23sp"/>
+
+            <ImageButton
+                android:id="@+id/add_education_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_add_black_18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/education_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/user_experience"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/EXP"
+                android:textAllCaps="true"
+                android:textSize="23sp"/>
+
+            <ImageButton
+                android:id="@+id/add_experience_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_add_black_18dp" />
+            <!-- 启动按下按键效果图-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/experience_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/user_project"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PRO"
+                android:textAllCaps="true"
+                android:textSize="23sp"/>
+
+            <ImageButton
+                android:id="@+id/add_project_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_add_black_18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/project_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
