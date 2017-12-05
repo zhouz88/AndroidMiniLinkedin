@@ -1,5 +1,5 @@
 Finish the UI of MINILINKEDIN, which shows your name, email, education, projects,and pictures.
-Check out "preview.png" to see what it should look like.
+Check out "screen shot.png" to see what it should look like.
 
 Knowledge points:
 - LinearLayout/Relative Layout
