@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);//Bundle savedInstanceState保存此activity档（状态信息）
         //fakeData();
         loadData();
         setupUI();
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupUI() {
         setContentView(R.layout.activity_main);//把XML文件读写到内存中！以View的形式存在， view相当于ListNode
-
+        
         ImageButton addEducationBtn = (ImageButton)findViewById(R.id.add_education_btn);
         addEducationBtn.setOnClickListener(new OnClickListener() {
             @Override
